@@ -21,8 +21,30 @@ namespace tpmodul3_1302201135
             Console.WriteLine("Kebonwaru" + "      " + KP.getKodePos("Kebonwaru"));
             Console.WriteLine("Maleer" + "         " + KP.getKodePos("Maleer"));
             Console.WriteLine("Samoja" + "         " + KP.getKodePos("Samoja"));
-        }
-    }
 
-    
+            DoorMachine status = new DoorMachine();
+            Console.WriteLine("Pintu");
+
+            int i;
+            for (i = 0; i < 3; i++)
+            {
+                Console.Write("Enter Command : ");
+                string command = Console.ReadLine();
+                while (command == "Terbuka" || command == "Terkunci")
+                {
+
+                    if (command == "Terbuka")
+                    {
+                        status.getDoor("Terbuka");
+                        break;
+                    }
+                    else if (command == "Terkunci")
+                    {
+                        status.getDoor("Terkunci");
+                    }
+                    break;
+                }
+            }
+        }
+    }  
 }
